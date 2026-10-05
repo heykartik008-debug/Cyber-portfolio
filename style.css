@@ -1,0 +1,337 @@
+/* --- GLOBAL STYLING RULES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0b0e;
+    color: #e4e4eb;
+    overflow-x: hidden;
+}
+
+/* --- APPLE STYLE BLURRED NAVIGATION --- */
+.apple-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: rgba(11, 11, 14, 0.7);
+    backdrop-filter: blur(20px); /* Hardware accelerated blur */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    color: #00ff66;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: #8e8e93;
+    text-decoration: none;
+    margin-left: 35px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00ff66;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    background: radial-gradient(circle at 85% 30%, rgba(0, 255, 102, 0.04), transparent 50%);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+}
+
+.hero-content h1 span {
+    color: #636366;
+}
+
+.hero-content p {
+    margin-top: 25px;
+    color: #8e8e93;
+    max-width: 550px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 32px;
+    background: #00ff66;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 8px 24px rgba(0, 255, 102, 0.15);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-btn:hover {
+    transform: scale(1.03);
+}
+
+/* --- FRAMEWORKS SECTION --- */
+.framework-section, .terminal-section {
+    padding: 120px 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cyber-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 40px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+    border-color: rgba(0, 255, 102, 0.2);
+    background: rgba(0, 255, 102, 0.01);
+}
+
+.cyber-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.cyber-card p {
+    color: #8e8e93;
+    line-height: 1.5;
+}
+
+/* --- INTERACTIVE TERMINAL ENGINE UI --- */
+.terminal-box {
+    max-width: 800px;
+    background: #1c1c1e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.terminal-header {
+    background: #2c2c2e;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.red { background: #ff453a; }
+.yellow { background: #ffd60a; }
+.green { background: #32d74b; }
+
+.terminal-header .title {
+    margin-left: 20px;
+    font-size: 0.85rem;
+    color: #aeaeae;
+}
+
+.terminal-body {
+    padding: 20px;
+    height: 250px;
+    overflow-y: auto;
+    font-family: monospace;
+}
+
+.log-line {
+    color: #00ff66;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.terminal-input-row {
+    display: flex;
+    padding: 0 20px 20px 20px;
+    align-items: center;
+}
+
+.prompt {
+    color: #ff9f0a;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#term-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-size: 0.95rem;
+    flex: 1;
+    outline: none;
+}
+
+/* --- TECH TAGS IN CARDS --- */
+.tech-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.04);
+    color: #00ff66;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-top: 15px;
+    border: 1px solid rgba(0, 255, 102, 0.1);
+}
+
+/* --- DECODER SECTION STYLING --- */
+.decoder-section {
+    padding: 120px 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.tool-container {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 40px;
+    border-radius: 16px;
+}
+
+.tool-flex {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#decoder-input {
+    flex: 1;
+    background: #1c1c1e;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: #fff;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.action-btn {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    padding: 0 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background: #00ff66;
+    color: #000;
+    border-color: #00ff66;
+}
+
+.output-box {
+    background: #1c1c1e;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    font-family: monospace;
+    color: #a0a0aa;
+    word-break: break-all;
+}
+/* --- AESTHETIC BG GRID & GLOW INJECTOR --- */
+.cyber-bg-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 40px 40px; /* High-tech clean matrix grid spacing */
+    z-index: -3;
+}
+
+.cyber-aura-blur {
+    position: fixed;
+    top: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 255, 102, 0.08), rgba(0, 240, 255, 0.03), transparent 70%);
+    filter: blur(80px);
+    z-index: -2;
+    animation: floatingAura 12s ease-in-out infinite alternate; /* Smooth dynamic motion loop */
+}
+
+/* --- HARDWARE ACCELERATED AESTHETIC MOTIONS (0% LAG) --- */
+@keyframes floatingAura {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(-100px, 80px) scale(1.15);
+    }
+}
+
+/* --- TEXT GLITCH GLOW EFFECT FOR APP HEADLINES --- */
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.05;
+    background: linear-gradient(180deg, #fff 0%, #a0a0aa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.05));
+}
+
+/* --- TRANSPARENT PREMIUM GLASS CARDS UPDATES --- */
+.cyber-card {
+    background: rgba(28, 28, 30, 0.4);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 255, 102, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 255, 102, 0.05);
+}

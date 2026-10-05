@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield | Advanced Offensive Engineering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Updated Navigation Links -->
+    <nav class="apple-nav">
+        <div class="logo">//CYBER_SHIELD</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#frameworks">Labs Log</a>
+            <a href="#decoder">Live Decoder</a>
+            <a href="#terminal">Sandbox Console</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Decoupled Security.<br><span>Engineered From Scratch.</span></h1>
+            <p>No heavy abstractions. Just native optimization, low latency text-routing protocols, and zero external framework dependencies.</p>
+            <a href="#frameworks" class="cta-btn">Explore Lab Log</a>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Dynamic Core Labs (Expanded Cards) -->
+    <section id="frameworks" class="framework-section">
+        <h2 class="section-title">Active Security Projects</h2>
+        <div class="cards-grid">
+            <div class="cyber-card">
+                <h3>01 / Micro-C2 Server Core</h3>
+                <p>Flask-driven asynchronous connection pool handler executing inside local socket structures with memory efficient data queues.</p>
+                <span class="tech-tag">Python</span> <span class="tech-tag">Flask</span> <span class="tech-tag">C2 Matrix</span>
+            </div>
+            <div class="cyber-card">
+                <h3>02 / Polling Agent Payload</h3>
+                <p>Native Python background process tracking telemetry and system outputs utilizing strict jitter delays to minimize footprint logs.</p>
+                <span class="tech-tag">Subprocess</span> <span class="tech-tag">Evasion</span> <span class="tech-tag">Linux Shell</span>
+            </div>
+            <div class="cyber-card">
+                <h3>03 / Port Scanner & Recon Engine</h3>
+                <p>Socket-based parallel script designed to identify active hosts and open server daemons natively without dependency maps.</p>
+                <span class="tech-tag">Sockets</span> <span class="tech-tag">OSINT</span> <span class="tech-tag">Automation</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 3: Live Cryptographic Decoder Tool (Brilliant Feature) -->
+    <section id="decoder" class="decoder-section">
+        <h2 class="section-title">Live Cryptographic Tools Utility</h2>
+        <div class="tool-container">
+            <p style="color: #8e8e93; margin-bottom: 20px;">Quick Base64 string manipulation for tracking encoded payloads during active analyses:</p>
+            <div class="tool-flex">
+                <input type="text" id="decoder-input" placeholder="Enter plain text or base64 string..." autocomplete="off">
+                <button onclick="processBase64('encode')" class="action-btn">Encode</button>
+                <button onclick="processBase64('decode')" class="action-btn">Decode</button>
+            </div>
+            <div id="decoder-output" class="output-box">Result string status line will output here...</div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Interactive Sandbox Terminal Box -->
+    <section id="terminal" class="terminal-section">
+        <h2 class="section-title">Interactive Sandbox Environment</h2>
+        <div class="terminal-box">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title">bash - session</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <p class="log-line">[*] Type 'help', 'status', or 'cheatsheet' to audit cybersecurity telemetry...</p>
+            </div>
+            <div class="terminal-input-row">
+                <span class="prompt">guest@cyber_shield:~$</span>
+                <input type="text" id="term-input" autocomplete="off">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<body>
+    <!-- Live Aesthetic Background Elements -->
+    <div class="cyber-bg-grid"></div>
+    <div class="cyber-aura-blur"></div>
+    <div class="cyber-matrix-overlay"></div>
